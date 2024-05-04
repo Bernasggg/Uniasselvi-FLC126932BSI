@@ -1,1 +1,42 @@
+Algoritmo "ler10notas"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : ler 10 notas, tirar a nota e saber quem passou ou não.
+// Autor(a)    :Bernardo Nunes Barros
+// Data atual  : 04/05/2024
+Var
+i:inteiro
+nota:vetor[0..9]de inteiro
+notaLida:inteiro
+media:inteiro
 
+
+Inicio
+para i de 0  ate 9 faca
+     escreva("Digite a nota do aluno",(i+1),"ou digite um valor negativo para parar o programa.")
+     leia(notaLida)
+
+     se (notaLida >=0) e (notaLida <=10) entao
+        notas[i]:=notaLida
+        media:=media+notaLida
+     senao
+          interrompa
+     fimse
+fimpara
+
+se(media>=0)e (media<=3)entao
+   escreva("Reprovado")
+fimse
+se (media>=4) e (media<=6)entao
+   escreva("Em exame!!")
+fimse
+se (media >=6) e (media<=10)entao
+escreva("Aprovado!")
+fimse
+
+
+
+
+
+
+Fimalgoritmo
